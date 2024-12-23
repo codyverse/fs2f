@@ -12,7 +12,7 @@ def setup_test_dirs(tmpdir):
     # Create a test structure
     input_dir = tmpdir.mkdir("input")
     output_dir = tmpdir.mkdir("output")
-    shapshot = tmpdir.join("structure.snap")
+    shapshot = tmpdir.join("structure.fs")
 
     # Add files to the input directory
     input_dir.join("test_file.txt").write("This is a test file.")
@@ -21,16 +21,16 @@ def setup_test_dirs(tmpdir):
     return str(input_dir), str(output_dir), str(shapshot)
 
 
-def test_snap_and_unsnap(setup_test_dirs):
+def test(setup_test_dirs):
     input_dir, output_dir, shapshot = setup_test_dirs
 
-    # Test the creation of a snap file
+    # Test the creation of a snapshot
     fs2f(input_dir, shapshot)
 
-    # Check whether the snap file exists
+    # Check whether the snapshot file exists
     assert os.path.exists(shapshot)
 
-    # Test the unsnap
+    # Test the restore the snapshot
     f2fs(shapshot, output_dir)
 
     # Check whether the files in the output directory have been restored
