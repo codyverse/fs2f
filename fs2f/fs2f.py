@@ -3,7 +3,7 @@ Module:         fs2f
 Description:    A tool to taking snapshots of a file structure into a single file.
 Author:         Andrii Burkatskyi aka andr11b
 Year:           2024
-Version:        0.0.1
+Version:        0.0.1.241223
 License:        MIT License
 Email:          4ndr116@gmail.com
 Link:           https://github.com/codyverse/fs2f

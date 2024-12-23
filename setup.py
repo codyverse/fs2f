@@ -2,7 +2,7 @@ from setuptools import setup, find_packages
 
 setup(
     name="fs2f",
-    version="0.0.1",
+    version="0.0.1.241223",
     description="A tool for taking snapshots of a file structure into a single file.",
     long_description=open("README.md").read(),
     long_description_content_type="text/markdown",
